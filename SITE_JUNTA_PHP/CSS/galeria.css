@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  padding-top: 150px;
+}
+
+.cards-container {
+  display: flex;
+  gap: 26px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  width: 100%;
+  height: 500px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #3c3c3c;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-17px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
+}
+
+.card img {
+  width: 100%;
+  height: 280px;
+  /*   ajustar a altura da img do card   */
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 1.5rem 2rem 2rem;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  color: #e0e0e0;
+}
+
+.card small {
+  text-decoration: none;
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cards-container {
+    gap: 1.5rem;
+  }
+
+  .card {
+    width: 280px;
+  }
+}
+
+@media (max-width: 700px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+.grade-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 2fr));
+  gap: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 30px;
+  height: 400px;
+}
+
+.cartao-galeria {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.cartao-galeria h3 {
+  text-align: center;
+  color: black;
+  font-size: 26px;
+  position: relative;
+  bottom: 20px;
+  font-family: "Inria Serif", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.cartao-galeria p {
+  text-align: center;
+  font-family: "Inria Serif", serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #3c3c3c;
+}
+
+.cartao-galeria:hover {
+  transform: translateY(-5px);
+}
+
+.cartao-galeria img {
+  width: 105%;
+  height: 220px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  cursor: default;
+  transition: transform 0.3s ease;
+  position: relative;
+  right: 7px;
+  bottom: 5px;
+}
+
+.cartao-galeria img:hover {
+  transform: scale(1.03);
+  /*para aumentar a img quando passo o rato*/
+}
+
+/*O CARTAO-NOTICIA H3, ESTÁ NO CSS INTERNO!!!*/
+
+.cartao-galeria a:link,
+a:visited {
+  color: #22649a;
+  text-decoration: none;
+  /*remove o sublinhado*/
+}
+
+
+/*imagem inicial*/
+
+.img_inicial {
+  position: relative !important;
+  background: url('IMAGENS/fundo.jpg') center center/cover no-repeat;
+  height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  margin-top: -190px;
+  z-index: 0;
+}
+
+.img_inicial::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(12, 23, 39, 0.68);
+  /* filtro azul escuro */
+  z-index: 1;
+}
+
+.texto {
+  text-align: center !important;
+  position: relative;
+  z-index: 2;
+  color: #eae1e1ff;
+  margin-bottom: 15px;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+}
+
+.texto .tituloprincipal {
+  text-align: center;
+  font-size: 39px;
+  font-weight: bold;
+  margin-top: 180px;
+}
+
+.texto .descricao {
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .img_inicial {
+    height: 120px;
+  }
+
+  .texto {
+    margin-left: 15px;
+  }
+
+  .img_inicial h1 {
+    font-size: 1.5em;
+  }
+}
+
+/*botao de grade-galeria*/
+a.button1 {
+  color: #353434 !important;
+  box-shadow: 10px 10px 10 0 black;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.3s ease, color 0.3s ease;
+  padding: 5px 7px;
+  border-radius: 90px;
+  background: #5fbdb7;
+  border: 1px solid transparent;
+  display: inline-flex;
+  /* inline-flex para comportar-se como link e alinhar svg */
+  align-items: center;
+  gap: 10px;
+  /* espaçamento entre texto e svg */
+  margin-left: 70px;
+  font-size: 15px;
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a.button1:hover {
+  transform: all 0.5s ease;
+  background: #5ebecd;
+  color: #e7dede !important;
+}
+
+
+a.button1>svg {
+  width: 28px;
+  /* ajusta conforme necessário */
+  height: 28px;
+  margin-left: 0;
+  transition: transform 0.28s cubic-bezier(.2, .9, .2, 1);
+  transform: translateX(0);
+  /* estado inicial */
+  will-change: transform;
+}
+
+/* ao passar o rato, desloca o svg para a frente */
+a.button1:hover>svg {
+  transform: translateX(6px);
+  /* deslocamento horizontal — ajusta valor */
+}
+
+/* efeito de "pressionado" ao clicar */
+a.button1:active {
+  transform: scale(0.96);
+}
+
+/* opcional: foco por teclado (acessibilidade) */
+a.button1:focus {
+  outline: 3px solid rgba(36, 166, 223, 0.25);
+  outline-offset: 3px;
+}

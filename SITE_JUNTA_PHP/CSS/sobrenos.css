@@ -1,0 +1,82 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.sobre-nos {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  padding-top: 210px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.texto {
+  flex: 1 1 60%;
+}
+
+.texto h2 {
+  font-size: 2.5rem;
+  color: #1a4e8a;
+  margin-bottom: 20px;
+}
+
+.texto p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.presidente {
+  flex: 1 1 35%;
+  background-color: #eaf1fb;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.presidente img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.presidente h3 {
+  font-size: 1.4rem;
+  color: #1a4e8a;
+  margin-bottom: 5px;
+}
+
+.presidente p {
+  font-size: 1rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .texto, .presidente {
+    flex: 1 1 100%;
+  }
+
+  .texto h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.footer-meruge {
+  background: #ffffffee;
+  font-family: 'DM Sans', Arial, sans-serif;
+  margin-top: 30px;
+  padding-top: 43px; /* adiciona espaço interno no topo */
+}
+
+.footer-meruge-top {
+  display: flex;
+  justify-content: flex-end; /* move tudo para a direita */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0 0 0;
+  flex-wrap: wrap;
+}
+
+.footer-meruge-brand {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 320px;
+}
+
+.footer-meruge-logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.footer-meruge-title {
+  text-align: center;
+  letter-spacing: 0.6px;
+  line-height: 38px;
+  font-size: 24px;
+  color: rgb(53, 48, 48);
+  margin-top: 8px;
+  font-weight: 800;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  max-width: 420px !important;                 
+  margin-left: -56px;              
+}
+
+.footer-meruge-logo {
+  height: 145px;
+  margin-bottom: 15px;
+  margin-left: 35px;
+}
+
+.footer-meruge-info{
+   margin-left: -51px; /* + px, move para a esquerda*/
+   letter-spacing: 0.6px;
+   font-size: 26px;
+}
+
+.footer-meruge-info i{
+   color: #FFA000;
+}
+.footer-meruge-info span{
+   white-space: nowrap;
+}
+.footer-meruge-info a {
+  color: #444444 !important; /* força a cor preta */
+  text-decoration: none;   /* remove o sublinhado */
+}
+
+
+.footer-meruge-info p {
+  margin: 0 0 13px 0;
+  color: #444;
+  position: relative;
+  font-size: 17px;
+}
+
+.footer-meruge-info .footer-meruge-icon {
+  color: #ffa000;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.footer-meruge-info small {
+  color: #555;
+  font-size: 14px;
+}
+
+.footer-meruge-section {
+  text-decoration: none !important;
+  flex: 1;
+  min-width: 130px;
+  margin-left: 70px;
+  margin-bottom: 20px;
+  letter-spacing: 0.6px;
+  font-size: 22px;
+  color: chocolate !important;
+}
+
+.footer-meruge-section a {
+  color: #444;
+  font-size: 17px;
+  text-decoration: none;
+  transition: color 0.4s;
+  white-space: nowrap; /* ADICIONAR - força o texto a ficar numa linha */
+  display: inline-block; /* ADICIONAR - ajuda a manter a linha única */
+}
+
+.footer-meruge-section h4 {
+  color: #333;
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 23px;
+  border-bottom: 2px solid #ffa000;
+  display: inline-block;
+  margin-right: 8px;
+  margin-top: 45px !important;
+}
+
+.footer-meruge-section ul {
+  list-style: none;
+  margin-top: 25px;
+}
+.footer-meruge-section li {
+  margin-bottom: 13px;
+  font-size: 25px;
+}
+.footer-meruge-section a {             /*     A COR DOS LINKS DO RODAPE SAO DEFINIDOS NO A, NAO NO LI   !!!!!*/
+  color: #444;
+  font-size: 17px;
+  text-decoration: none;
+  transition: color 0.4s;
+  color: #22649A !important;
+}
+.footer-meruge-section a:hover {
+  color: #ffa000 !important;
+  text-decoration: none;
+}
+
+.footer-meruge-livro {
+  display: inline-block;
+  background: #cb202d;
+  color: #fff;
+  font-size: 12px;
+  padding: 8px 22px;
+  border-radius: 24px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.footer-meruge-bottom {
+  margin-top: 25px;
+  border-top: 1px solid #dcd6d6;
+  padding: 18px 0 10px 0;
+}
+
+.footer-meruge-bottom p {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 500;
+}

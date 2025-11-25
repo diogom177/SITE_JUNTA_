@@ -1,0 +1,280 @@
+body {
+  margin-top: 140px !important;
+}
+
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fefefe;
+  color: #1a2a54;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #064c1b;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 3rem auto 4rem;
+  padding: 0 1.5rem;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex: 1 1 450px;
+  min-width: 320px;
+  max-width: 450px;
+  margin-right: 90px;
+  margin-right: auto; 
+}
+
+.contact-info h2 {
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.address,
+.phone,
+.email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* Espaço horizontal entre ícone e texto */
+  margin-bottom: 8px;
+}
+
+.info{
+    margin-right: 40px;
+    position: relative;
+}
+
+.contact-info p.description {
+  color: #586375;
+  font-size: 16px;
+  margin-bottom: 4px;
+  line-height: 0.3px;
+}
+
+.contact-info strong {
+  font-weight: 700;
+  color: #102246;
+}
+
+.contact-info .address,
+.contact-info .phone,
+.contact-info .email {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #586375;
+  margin-bottom: 0.4rem;
+}
+
+.contact-info .address svg,
+.contact-info .phone svg,
+.contact-info .email svg {
+  width: 18px;
+  height: 18px;
+  fill: #8391ac;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+.contact-info h3 {
+  margin-top: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.15rem;
+  color: #1a2a54;
+}
+
+.contact-info .hours p {
+  font-size: 1rem;
+  color: #6e7e91;
+  line-height: 1.55;
+  margin-top: 0.2rem;
+  margin-bottom: 0.7rem;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.social-icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background-color: #001438;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.social-icon-btn:hover {
+  background-color: #a32d2d;
+}
+
+.social-icon-btn svg,
+.social-icon-btn i {
+  fill: white;
+  width: 18px;
+  height: 18px;
+}
+
+/* Bloco Direito - Formulário */
+.contact-form-wrapper {
+  background: #fff;
+  box-shadow: 0 6px 42px rgb(17 56 107 / 0.14);
+  border-radius: 12px;
+  padding: 36px 36px 24px 36px;
+  flex: 1 1 370px;
+  min-width: 320px;
+  max-width: 480px;
+  margin-right: 2vw;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-wrapper h3 {
+  margin-top: 0;
+  margin-bottom: 1.4rem;
+  color: #102246;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.input-row {
+  display: flex;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.input-row input {
+  flex: 1 1 0;
+}
+
+.email-wrapper {
+  position: relative;
+  flex: 1 1 0;
+}
+
+.email-wrapper svg {
+  position: absolute;
+  right: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  fill: #d41923;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  border: 1px solid #ccd3de;
+  border-radius: 5px;
+  padding: 0.75rem 1.05rem;
+  font-size: 1.04rem;
+  color: #324461;
+  font-family: inherit;
+  transition: border-color 0.3s;
+  width: 100%;
+  background: #f9fafc;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #064c1b;
+  box-shadow: 0 0 6px #064c1b33;
+}
+
+input[name="assunto"] {
+  width: 100%;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: #064c1b;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.09rem;
+  padding: 0.9rem 2.2rem;
+  border-radius: 4px;
+  margin-top: 1.1rem;
+  align-self: flex-start;
+  box-shadow: 0 1.5px 8px rgba(29, 68, 31, 0.06);
+  transition: background 0.3s, color 0.3s;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0d6230;
+}
+
+/* Responsivo */
+@media (max-width: 980px) {
+  .container {
+    flex-direction: column;
+    gap: 1.8rem;
+    margin: 2.5rem auto 2.5rem;
+    align-items: stretch;
+  }
+
+  .contact-form-wrapper {
+    margin-right: 0;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .contact-info {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 0.4rem;
+    gap: 1.1rem;
+  }
+
+  .contact-info h2 {
+    font-size: 1.3rem;
+  }
+
+  .contact-form-wrapper {
+    padding: 18px 7px 14px 7px;
+    border-radius: 7px;
+  }
+}

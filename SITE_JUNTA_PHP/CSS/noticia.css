@@ -1,0 +1,778 @@
+.pagina-noticia {
+  max-width: 800px;
+  /* largura máxima */
+  margin: 50px auto;
+  /* centralizado na página */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  line-height: 1.7;
+}
+
+.pagina-noticia h1 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.pagina-noticia h2 {
+  font-size: 1.6rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.pagina-noticia em {
+  display: block;
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.pagina-noticia img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.pagina-noticia p {
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.btn-voltar {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #003d80;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-voltar:hover {
+  background-color: #0056b3;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  .pagina-noticia {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .pagina-noticia h1 {
+    font-size: 2rem;
+  }
+
+  .pagina-noticia h2 {
+    font-size: 1.4rem;
+  }
+
+  .pagina-noticia p {
+    font-size: 1rem;
+  }
+
+  .cartao-noticias {
+    min-height: 400px;
+  }
+}
+
+.imgnoticia img {
+  text-align: center;
+  width: 50%;
+  height: auto;
+  border-radius: 50% !important;
+}
+
+
+.secao-noticias {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.secao-noticias h2 {
+  font-family: "Tinos", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.titulo-noticias {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #1a1a1a;
+}
+
+
+/*grade noticias*/
+
+
+
+.grade-noticias-noticias {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 130px;
+
+}
+
+/* Transições para fade in/out ao atualizar resultados */
+.grade-noticias-noticias,
+.paginacao {
+  transition: opacity 0.32s ease, transform 0.32s ease;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cartao-noticias {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease;
+  min-height: 550px;
+}
+
+.cartao-noticias:hover {
+  transform: translateY(-5px);
+}
+
+.cartao-noticias img {
+  height: 220px;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  cursor: default;
+  transition: transform 0.3s ease;
+}
+
+.cartao-noticias img:hover {
+  transform: scale(1.05);
+}
+
+/*O CARTAO-NOTICIA H3, ESTÁ NO CSS INTERNO!!!*/
+
+.cartao-noticias a:link,
+a:visited {
+  color: #22649a;
+  text-decoration: none;
+  /*remove o sublinhado*/
+}
+
+.cartao-noticias p {
+  font-size: 0.95em;
+  color: #444;
+  margin-bottom: 15px;
+  text-overflow: ellipsis !important;
+}
+
+.cssbuttons-io-button {
+  background: #49a3df;
+  color: white !important;
+  font-family: "Poppins", serif;
+  padding: 6px;
+  padding-left: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 14px;
+  border: none;
+  letter-spacing: 0.2px;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 26px -10px #429197;
+  overflow: hidden;
+  position: relative;
+  height: 42px;
+  padding-right: 23px;
+  cursor: pointer;
+  max-width: 140px;
+}
+
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #4d96be;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #1252ab;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+/*acaba aqui*/
+
+.cssbuttons-io-button a {
+  text-decoration: none;
+  color: #fefefe;
+}
+
+.vermais-container-noticias {
+  margin-top: 40px;
+}
+
+/*botoes de navegaçao noticias*/
+.botoes-navegacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Centraliza verticalmente se necessário */
+  width: 900px;
+  /* Ajuste conforme o espaço desejado */
+  margin: -70px auto 0 auto;
+  /* Centraliza todo o bloco horizontalmente */
+}
+
+.navegacao-container {
+  position: relative;
+  width: 100%;
+  max-width: 870px;
+  /* ajuste se necessário */
+  margin: 0 auto;
+}
+
+.nav-esquerda,
+.nav-direita {
+  position: absolute;
+  top: -50px;
+}
+
+.nav-esquerda {
+  left: 0;
+}
+
+.nav-direita {
+  right: 0;
+}
+
+.botao-nav {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #0078d4;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #0078d4;
+  transition: 0.2s ease-in-out;
+}
+
+.botao-nav:hover {
+  background: #0078d4;
+  color: white;
+}
+
+.cartao-noticias p {
+  cursor: text;
+  font-size: 15px;
+  font-family: "Poppins", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.2px;
+  /*espaçamento entre as letras*/
+}
+
+.grade-noticias-noticias .date {
+  font-size: 15px;
+  margin-left: 30px;
+  color: #444444;
+  margin-bottom: 10px;
+}
+
+
+
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip-box {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translate(-50%, -110%);
+  width: 180px;
+  padding: 10px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.25s ease;
+  text-align: center;
+  z-index: 999;
+}
+
+.tooltip-box img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.tooltip-box p {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #333;
+  font-weight: 600;
+}
+
+.tooltip:hover .tooltip-box {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -120%);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*caixas dos anos e meses ↓↓↓↓↓↓↓↓↓*/
+.custom-select {
+  position: relative;
+  width: 180px;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  user-select: none;
+  cursor: pointer;
+  border: 2px solid #4a90e2;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: opacity 0.5s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  z-index: 1600;
+}
+
+/* Texto selecionado */
+.custom-select .selected {
+  flex-grow: 1;
+  font-size: 16px;
+  color: #4548499b;
+}
+
+/* Seta */
+.custom-select .arrow {
+  border: solid #4a90e2;
+  border-width: 0 2.5px 2.5px 0;
+  display: inline-block;
+  padding: 5px;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+  margin-left: 10px;
+}
+
+.custom-select.open .arrow {
+  transform: rotate(-135deg);
+}
+
+/* Sombra só quando dropdown está aberto */
+.custom-select.open {
+  border-color: #1e5bb8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Lista de opções */
+.custom-select .options {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  max-height: 220px;
+  overflow-y: auto;
+  background: #fff;
+  border: 2px solid #4a90e2;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgba(74, 144, 226, 0.3);
+  z-index: 1000;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: opacity 0.3s ease, transform 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* Mostrar lista aberta */
+.custom-select.open .options {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Opções individuais */
+.custom-select .options li {
+  padding: 10px 15px;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Hover nas opções */
+.custom-select .options li:hover:not(.placeholder) {
+  background-color: #e3f0ff;
+  color: #2864be;
+}
+
+/* Placeholder (não selecionável) */
+.custom-select .options li.placeholder {
+  color: #999;
+  font-style: italic;
+  cursor: default;
+  user-select: none;
+  pointer-events: none;
+}
+
+
+.input {
+  border-bottom: 45px solid !important;
+  position: relative !important;
+  z-index: 12 !important;
+}
+
+.input-border {
+  margin-bottom: 8px;
+  z-index: 127;
+}
+
+.form2 .input {
+  border: none !important;
+  /* remove bordas globais */
+  border-bottom: var(--border-height) solid var(--border-before-color) !important;
+  background-color: transparent !important;
+  outline: none !important;
+}
+
+.input:focus::placeholder {
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+.form2 {
+  --width-of-input: 680px !important;
+  --border-height: 2px !important;
+  --border-before-color: #bfbfbf !important;
+  --border-after-color: #4a90e2 !important;
+  --input-hovered-color: #00A6DE1A !important;
+  position: relative !important;
+  width: var(--width-of-input) !important;
+}
+
+.input {
+  color: #000 !important;
+  font-size: 17px !important;
+  background-color: transparent !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding-inline: 0.5em;
+  z-index: 123;
+  padding-block: 0.7em;
+  border: none !important;
+  border-bottom: var(--border-height) solid var(--border-before-color) !important;
+  font-family: "Raleway", sans-serif !important;
+  font-weight: 500 !important;
+  outline: none !important;
+}
+
+.input-border {
+  position: absolute;
+  background: var(--border-after-color);
+  width: 0%;
+  height: 2px;
+  bottom: -1px;
+  left: 0;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input:hover {
+  background: var(--input-hovered-color);
+}
+
+.input:focus~.input-border {
+  width: 100%;
+}
+
+#customSelectMes {
+  width: 150px;
+}
+
+#customSelectAno {
+  width: 120px;
+}
+
+/*filtros ativos*/
+.filtro-ativo {
+  background: #e3f0ff;
+  color: #1e5bb8;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filtro-ativo button {
+  background: transparent;
+  border: none;
+  color: #1e5bb8;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.filtro-chip {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 7px 22px;
+  border: 1.5px solid #24a6df;
+  color: #24a6df;
+  border-radius: 20px;
+  font-size: 15px;
+  background: #fff;
+  font-weight: 600;
+  margin: 0;
+  cursor: pointer;
+  gap: 8px;
+  white-space: nowrap;
+  min-width: 110px;
+  max-width: 250px;
+  overflow: hidden;
+  transition: background 0.25s, border-color 0.25s, color 0.25s, opacity 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: translateY(-8px);
+  animation: chipIn 0.4s forwards;
+}
+
+@keyframes chipIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filtro-chip .close {
+  font-size: 20px;
+  margin-left: 8px;
+  padding: 0 2px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.filtro-chip .close:hover {
+  cursor: pointer;
+  color: red;
+  transform: translateY(-3px);
+}
+
+.filtro-chip:hover {
+  background: #e3f0ff;
+  color: #1e5bb8;
+  border-color: #1e5bb8;
+}
+
+#filtrosForm {
+  position: absolute;
+  transition: transform 0.9s ease;
+}
+
+#filtrosSelecionados {
+  display: flex;
+  flex-direction: column;
+  gap: 15px !important;
+  align-items: flex-end;
+  margin-bottom: -7px;
+  flex-wrap: unset;
+  min-height: 0;
+  /* deslocar chips 20px para a direita conforme pedido */
+  transform: translateX(20px);
+  /* manter chips atrás dos selects para não bloquear cliques */
+  z-index: 1200;
+  transition: transform 0.6s ease, opacity 0.2s ease;
+}
+
+/* estilo clássico do chip (restaurado) */
+#filtrosSelecionados .filtro-ativo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 22px;
+  border: 1.5px solid #24a6df;
+  color: #24a6df;
+  background: #fff;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  gap: 8px;
+  white-space: nowrap;
+  min-width: 110px;
+  max-width: 250px;
+  overflow: hidden;
+  cursor: pointer;
+  /* Iniciar oculto e animar entrada */
+  opacity: 0;
+  transform: translateY(-8px);
+  animation: chipIn 0.35s forwards;
+}
+
+/* Estado com filtros ativos - form desloca para a esquerda */
+#filtrosForm.filtros-ativos {
+  transform: translateX(-180px);
+  /* valor ajustável */
+}
+
+/* A form2 diminui o input */
+#filtrosForm.filtros-ativos .form2 {
+  width: 380px;
+  /* menor largura */
+  transition: width 0.4s ease;
+}
+
+#filtrosSelecionados .filtro-ativo button {
+  background: none;
+  border: none;
+  color: #1e82cf;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+.sidebar-recentes {
+  position: absolute;
+  top: 540px;
+  right: 40px;
+  width: 440px;
+  background: none;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(30, 40, 85, 0.08);
+  padding: 12px 15px;
+  z-index: 999;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.sidebar-noticia {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 18px;
+}
+
+.sidebar-noticia a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.sidebar-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.sidebar-texto {
+  max-width: 450px;
+  /* controla a largura */
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebar-titulo-noticia {
+  /*titulo da noticia*/
+  font-size: 16px;
+  font-weight: 500;
+  color: #151414ff;
+  margin-bottom: 17px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+  display: block;
+  position: relative;
+  bottom: 10px;
+}
+
+.sidebar-titulo {
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  color: #3aa2cfff;
+  font-weight: 600;
+  position: relative;
+  bottom: 10px;
+}
+
+.sidebar-data {
+  font-size: 15px;
+  position: absolute;
+  letter-spacing: 0.1px;
+  left: 120px;
+  margin-top: 40px;
+  color: #201d1dff;
+  white-space: nowrap;
+}

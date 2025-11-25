@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.locais-interesse {
+  margin-top: -45px;
+  background-color: #F7FDFF;
+  text-align: center;
+}
+
+.cartoes-locais {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.cartao {
+  background: rgb(251, 248, 248);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 12px 16px;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.cartao:hover {
+  transform: translateY(-5px);
+}
+
+.cartao img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.cartao h3 {
+  color: #0d4bb7;
+  font-size: 20px;
+  margin-bottom: 60px;
+  /*AJUSTAR ESTE VALOR CONFORME FOR POR AS IMAGENS*/
+}
+
+.cartao p {
+  font-size: 15px;
+  margin-top: -40px;
+  /*AJUSTAR ESTE VALOR CONFORME FOR POR AS IMAGENS*/
+  color: #333;
+}
+
+.cartao a {
+  text-decoration: none;
+  color: white;
+  background-color: #0d4bb7;
+  padding: 8px 16px;
+  border-radius: 7px;
+  display: inline-block;
+}
+
+.cartao a:hover {
+  background-color: #3583d2;
+  transition: background-color 0.4s;
+}
+                   /**********      *METER O TEXTO MAIS PARA CIMA DO BANNER, E O BREADCRUMPS EDITAR TUDO !!!     ****************/
+.container {
+  display: grid;
+  gap: 36px;
+  max-width: 1350px;
+  width: 100%;
+  height: 320px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px 0;
+  margin: o auto;
+}
+
+.card {
+  border-radius: 12px;
+  box-shadow: 4px 4px 4px 4px rgba(33, 33, 33, 0.19),
+    -4px 4px 5px 4px rgba(0, 0, 0, 0.19);
+  background-color: #fff;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 4px 4px 4px 4px rgba(108, 106, 106, 0.19),
+    -4px 4px 5px 4px rgba(108, 106, 106, 0.19);
+}
+
+.bg-image {
+  overflow: hidden !important;
+  border-radius: 10px 10px 0 0;
+}
+
+.bg-image img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .bg-image img {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 24px 19.2px;
+}
+
+.card-title {
+  font-weight: 600;
+  color: #444;
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: bold;
+  margin-top: -2px;
+}
+
+.btn {
+  position: relative;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1px 40px 20px 40px;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 6em;
+  transition: all 1.5s;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(43, 41, 41);
+  background-color: white;
+  margin-top: 20px;
+  /*para dar espaçamento*/
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #555a78;
+  color: #fff;
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+
+@media (max-width: 1000px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+#btn-download {
+  position: absolute;
+  top: 40px;
+  right: 90px;
+  color: white;
+  /* ícone branco */
+  font-size: 27px;
+  z-index: 1001;
+  /* acima da imagem */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#btn-download:hover {
+  color: #c0baba;
+  /* ligeiro efeito ao passar o rato */
+}
+
+#btn-download-index {
+  position: absolute;
+  top: 40px;
+  right: 90px;
+  color: white;
+  /* ícone branco */
+  font-size: 27px;
+  z-index: 1001;
+  /* acima da imagem */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#btn-download-index:hover {
+  color: #c0baba;
+}
+
+#fullscreen-btn, #fullscreen-icon{
+  position: absolute;
+  top: 21px;
+  right: 77px;
+  color: white;
+  /* ícone branco */
+  font-size: 25px;
+  z-index: 1001;
+  /* acima da imagem */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
